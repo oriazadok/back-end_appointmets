@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+/routes/temp.js
+/routes/tempapi.js
+/routes/users.js
+
 # testing
 /coverage
 
