@@ -44,11 +44,11 @@ router.post("/signUp", (req, res) => {
     })
     .then((userRecord) => {
       console.log('Successfully created new user:', userRecord.uid);
-      res.json(true);
+      res.json(userRecord);
     })
     .catch((error) => {
       console.error('Error creating new user:', error);
-      res.json(false);
+      res.json(undefined);
     });
 
   const collectionRef = admin.firestore().collection('clients');
@@ -64,18 +64,9 @@ router.post("/signUp", (req, res) => {
   .catch((error) => {
       console.error('Error adding document to Firestore:', error);
   });
+
 });
 
 
 
-
-
-
-
 module.exports = router
-
-
-
-
-
-
